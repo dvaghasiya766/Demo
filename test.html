@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrep CDN -->
+    <link rel="stylesheet" href="Assets/Bootstrp Files/bootstrap.min.css">
+    <script src="Assets/Bootstrp Files/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: 'JetBrainsMono';
+            /* Name of the font */
+            src: url('Assets/Fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+            /* Path to the.ttf file */
+        }
+
+        /* Applying the font to the body */
+        body {
+            font-family: 'JetBrainsMono', monospace;
+        }
+
+        /* Customizing the navigation bar */
+        .navbar-background {
+            background-color: #C4DAE6;
+        }
+
+        .nav-group {
+            border-bottom: solid 2px #978E8E;
+        }
+
+        .nav-group:last-child {
+            border-bottom: none;
+        }
+
+        .selected-nav-item {
+            background-color: #C4DAE6;
+        }
+
+        .nav-item {
+            cursor: pointer;
+            height: 50px;
+            align-items: center;
+            max-width: 250px;
+            border: solid 0px #C4DAE6;
+            transition: ease 0.1s;
+        }
+
+        .nav-item:hover {
+            border-bottom: solid 3px #C4DAE6;
+        }
+
+        .nav-icon {
+            width: 35px;
+            margin: 0px 10px;
+        }
+
+        .nav-icon-label {
+            color: #1B5A7A;
+        }
+
+        /* Customizing the main content */
+        .body-background {
+            background-color: #FFFFFF;
+            height: 100vh;
+        }
+    </style>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Navigation bar -->
+            <div class="col-2 navbar-background px-0  d-flex flex-column">
+                <div class="nav-group" id="navGroup1"><img src="Assets/Images/207667896-removebg-preview.png" alt=""
+                        class="img-fluid">
+                </div>
+                <div class="nav-group flex-grow-1" id="navGroup2">
+                </div>
+                <div class="nav-group d-flex align-items-end flex-column mt-auto py-2" id="navGroup3"></div>
+            </div>
+            <!-- Main content -->
+            <div class="col-10 body-background py-4"></div>
+        </div>
+    </div>
+    <script>
+        const tabList = [
+            "Home", "My Journey", "Assignments", "Quiz & Practice",
+            "Discussion", "Schedule", "Progress", "Profile"
+        ];
+        const tabIcons = [
+            "Home_duotone", "Chart_alt_duotone_line@3x", "Book_duotone_line@3x",
+            "Book_open_duotone@3x", "Chat_alt_3_duotone_line@3x",
+            "Date_today_duotone@3x", "Flag_finish_duotone_fill", "User_box_duotone"
+        ];
+        const bottomTabList = ["Help"];
+        const bottomTabIcons = ["Question_duotone@3x1.png"];
+        let currentTab = 0;
+        function appendChildMethod(parentContainer, childContainer) {
+            parentContainer.appendChild(childContainer);
+        }
+        function displayTabContent(index) {
+            let parentContainer = document.getElementById("navGroup2");
+            // Clear the existing content
+            parentContainer.innerHTML = "";
+            // Create the new content
+            let outerContainer = document.createElement("div");
+            outerContainer.classList.add("d-flex", "flex-column", "justify-content-center", "px-3", "py-2");
+
+            for (let currentIndex = 0; currentIndex < tabIcons.length; currentIndex++) {
+                let childContainer = document.createElement("div");
+                childContainer.classList.add("d-flex", "flex-row", "justify-content-start", "nav-item", "rounded", "mt-1");
+                let iconContainer = document.createElement("img");
+                iconContainer.src = `Assets/Images/${tabIcons[currentIndex]}1.png`;
+                if (currentIndex === (index - 1)) {
+                    childContainer.classList.add("bg-light");
+                    iconContainer.src = `Assets/Images/${tabIcons[currentIndex]}.png`;
+                }
+                iconContainer.classList.add("nav-icon");
+                appendChildMethod(childContainer, iconContainer);
+                let labelContainer = document.createElement("p");
+                labelContainer.textContent = tabList[currentIndex];
+                labelContainer.classList.add("my-0", "d-none", "d-lg-inline", "nav-icon-label");
+                appendChildMethod(childContainer, labelContainer);
+                appendChildMethod(outerContainer, childContainer);
+            }
+            // Append the content to the outer container
+            appendChildMethod(parentContainer, outerContainer);
+        }
+        function displayBottomTabContent() {
+            let parentContainer = document.getElementById("navGroup3");
+            // Clear the existing content
+            parentContainer.innerHTML = "";
+            // Create the new content
+            let outerContainer = document.createElement("div");
+            outerContainer.classList.add("d-flex", "flex-row-reverse", "nav-item");
+
+            for (let currentIndex = 0; currentIndex < bottomTabIcons.length; currentIndex++) {
+                let childContainer = document.createElement("div");
+                childContainer.classList.add("d-flex", "flex-row-reverse", "justify-content-start", "nav-item", "rounded", "mt-1");
+                let iconContainer = document.createElement("img");
+                iconContainer.src = `Assets/Images/${bottomTabIcons[currentIndex]}`;
+                iconContainer.classList.add("nav-icon");
+                appendChildMethod(childContainer, iconContainer);
+                let labelContainer = document.createElement("p");
+                labelContainer.textContent = bottomTabList[currentIndex];
+                labelContainer.classList.add("my-0", "d-none", "d-lg-inline", "nav-icon-label");
+                appendChildMethod(childContainer, labelContainer);
+                appendChildMethod(outerContainer, childContainer);
+            }
+            // Append the content to the outer container
+            appendChildMethod(parentContainer, outerContainer);
+        }
+        displayTabContent(1);
+        displayBottomTabContent();
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+
+ -->

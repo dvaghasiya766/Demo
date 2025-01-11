@@ -38,7 +38,7 @@
         }
 
         .selected-nav-item {
-            background-color: #C4DAE6;
+            background-color: #FFFFFF;
         }
 
         .nav-item {
@@ -46,12 +46,15 @@
             height: 50px;
             align-items: center;
             max-width: 250px;
+        }
+
+        .unselected-nav-item {
             border: solid 0px #C4DAE6;
             transition: ease 0.1s;
         }
 
-        .nav-item:hover {
-            border-bottom: solid 3px #C4DAE6;
+        .unselected-nav-item:hover {
+            border-bottom: solid 3px #FFFFFF;
         }
 
         .nav-icon {
@@ -111,12 +114,15 @@
             for (let currentIndex = 0; currentIndex < tabIcons.length; currentIndex++) {
                 let childContainer = document.createElement("div");
                 childContainer.classList.add("d-flex", "flex-row", "justify-content-start", "nav-item", "rounded", "mt-1");
+                childContainer.onclick = function () {
+                    displayTabContent(currentIndex + 1);
+                };
                 let iconContainer = document.createElement("img");
                 iconContainer.src = `Assets/Images/${tabIcons[currentIndex]}1.png`;
                 if (currentIndex === (index - 1)) {
-                    childContainer.classList.add("bg-light");
+                    childContainer.classList.add("selected-nav-item");
                     iconContainer.src = `Assets/Images/${tabIcons[currentIndex]}.png`;
-                }
+                } else { childContainer.classList.add("unselected-nav-item"); }
                 iconContainer.classList.add("nav-icon");
                 appendChildMethod(childContainer, iconContainer);
                 let labelContainer = document.createElement("p");

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Python IDE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/theme/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/addon/edit/closebrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.4/mode/python/python.min.js"></script>
+    <link rel="stylesheet" href="codemirror-custom.css">
+</head>
+
+<body>
+    <h1>Online Python IDE</h1>
+    <div class="navs">
+        <button type="button" onclick="runCode()">Run Code</button>
+    </div>
+    <div class="contain">
+        <textarea id="code-editor" name="code">print("Hello Word!")</textarea>
+        <div class="op"><pre id="output">Hello Word!</pre></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

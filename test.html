@@ -8,6 +8,8 @@
     <!-- Bootstrep CDN -->
     <link rel="stylesheet" href="Assets/Bootstrp Files/bootstrap.min.css">
     <script src="Assets/Bootstrp Files/bootstrap.bundle.min.js"></script>
+    <!-- For Charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body>
@@ -24,13 +26,14 @@
             font-family: 'JetBrainsMono', monospace;
         }
 
-        /* Customizing the navigation bar */
+        /* Customizing the navigation bar #978E8E */
         .navbar-background {
             background-color: #C4DAE6;
+            border-right: solid 2px #777777;
         }
 
         .nav-group {
-            border-bottom: solid 2px #978E8E;
+            border-bottom: solid 2px #777777;
         }
 
         .nav-group:last-child {
@@ -70,21 +73,91 @@
         .body-background {
             background-color: #FFFFFF;
             height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        .personal-details {
+            margin: 5px 10px;
+            padding: 0px;
+            font-size: 16px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid #777777;
+        }
+
+        .scoreContainer {
+            height: 120px;
+            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: conic-gradient(#d20314ad 0%, rgb(210 3 19 / 14%) 0%);
+            transition: ease 1s;
+        }
+        .scoreContainer:hover {
+            box-shadow: 0px 0px 10px 5px #d20314ad;
+        }
+
+        .averageScore {
+            position: relative;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            cursor: pointer;
+        }
+        .titleScore{
+            margin: 0%;
+            font-weight: 600;
         }
     </style>
     <div class="container-fluid">
         <div class="row">
             <!-- Navigation bar -->
             <div class="col-2 navbar-background px-0  d-flex flex-column">
-                <div class="nav-group" id="navGroup1"><img src="Assets/Images/207667896-removebg-preview.png" alt=""
-                        class="img-fluid">
+                <div class="nav-group" id="navGroup1"><img src="Assets/Images/image 16.png" alt=""
+                        class="img-fluid mb-3">
                 </div>
                 <div class="nav-group flex-grow-1" id="navGroup2">
                 </div>
                 <div class="nav-group d-flex align-items-end flex-column mt-auto py-2" id="navGroup3"></div>
             </div>
             <!-- Main content -->
-            <div class="col-10 body-background py-4"></div>
+            <div class="col-10 body-background pt-3">
+                <div class="d-flex flex-row justify-content-between">
+                    <div class="d-flex flex-row justify-content-start">
+                        <img src="Assets/Images/Passpoert_size Photo.jpg" class="img-fluid profile-pic">
+                        <div class="" onclick="">
+                            <p class="personal-details">Name: Dev Vaghasiya</p>
+                            <p class="personal-details">Studnt ID: 22SOEIT11035</p>
+                            <p class="personal-details">Course: B.Tech Information of Technology</p>
+                            <p class="personal-details">Semester: VI</p>
+                            <p class="personal-details">Mentor Name: K.S. Shreevastav</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center">
+                        <div class="scoreContainer" id="scoreContainer">
+                            <div class="averageScore" id="averageScore">
+                                90%
+                            </div>
+                        </div>
+                        <p class="titleScore pt-1 m-0">Average Score</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
         </div>
     </div>
     <script>
@@ -158,6 +231,22 @@
             // Append the content to the outer container
             appendChildMethod(parentContainer, outerContainer);
         }
+        function AvgScore() {
+            let circularProgress = document.getElementById("scoreContainer");
+            let progressValue = document.getElementById("averageScore");
+            let progress = 0;
+            let interval = setInterval(() => {
+                progress++;
+                if (progress > 90) {
+                    clearInterval(interval);
+                } else {
+                    // Update the progress bar
+                    circularProgress.style.background = `conic-gradient(#D20313 ${progress * 3.6}deg, rgb(210 3 19 / 14%) 0deg)`;
+                    progressValue.textContent = `${progress}%`;
+                }
+            }, 1); // Adjust the speed of the progress bar by changing the interval time
+        }
+        AvgScore();
         displayTabContent(1);
         displayBottomTabContent();
     </script>

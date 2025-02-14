@@ -13,6 +13,8 @@
         crossorigin="anonymous"></script>
     <!-- External CSS -->
     <link rel="stylesheet" href="style1001_For_Reg.css">
+    <!-- External JS -->
+    <script src="test1001_For_Reg.js"></script>
 </head>
 
 <body>
@@ -20,21 +22,42 @@
         <h1 class="mainTitle">Sign Up</h1>
         <div class="innerContainer">
             <div class="tabContainer">
-                <div class="selectedTab">
-                    <img class="tabImage" src="Assets/Images/Frame 102.png" alt="">
+                <button onclick="tabChange('subForm1')" class="tab" id="tab1">
+                    <img id="tabImage1" class="tabImage" src="Assets/Images/Frame 104.png" alt="">
                     <p class="tabTitle">Basic Details</p>
-                </div>
-                <div class="tab">
-                    <img class="tabImage" src="Assets/Images/Frame 104.png" alt="">
+                    <span class="tabtooltiptext">Basic Details</span>
+                </button>
+                <button onclick="tabChange('subForm2')" class="tab" id="tab2">
+                    <img id="tabImage2" class="tabImage" src="Assets/Images/Frame 104.png" alt="">
                     <p class="tabTitle">Education Details</p>
-                </div>
-                <div class="tab">
-                    <img class="tabImage" src="Assets/Images/Frame 104.png" alt="">
+                    <span class="tabtooltiptext">Education Details</span>
+                </button>
+                <button onclick="tabChange('subForm3')" class="tab" id="tab3">
+                    <img id="tabImage3" class="tabImage" src="Assets/Images/Frame 104.png" alt="">
                     <p class="tabTitle">LogIn Credentials</p>
-                </div>
+                    <span class="tabtooltiptext">LogIn Credentials</span>
+                </button>
             </div>
+            <form action="" method="post">
+                <div class="forms" id="Forms">
+                    <div class="subForm" id="subFrom1"></div>
+                    <div class="subForm" id="subFrom2"></div>
+                    <div class="subForm" id="subFrom3"></div>
+                </div>
+            </form>
         </div>
     </div>
+    <script>
+        function changeTabImage(tabId) {
+            let idn = tabId.slice(-1);
+            if (tabProperty[`fullFilledsubForm${idn}`]) {
+                let tabImage = document.getElementById(`tabImage${idn}`);
+                tabImage.src = "Assets/Images/Frame 102.png";
+            }
+        }
+        changeTabImage("tab1");
+        tabChange('subForm1');
+    </script>
 </body>
 
 </html>

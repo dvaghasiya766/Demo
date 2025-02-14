@@ -80,6 +80,37 @@ body {
 .tabTitle {
   margin: 0px 0px 0px 10px;
 }
+.tabtooltiptext {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -100%);
+  background: #555;
+  color: #fff;
+  white-space: nowrap;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 7px;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+.tabtooltiptext::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0%);
+  border: 5px solid;
+  border-color: #555 transparent transparent transparent;
+  /* opacity: 0; */
+}
+.tab:hover .tabtooltiptext,
+.selectedTab:hover .tabtooltiptext {
+  top: 0%;
+  visibility: visible;
+  opacity: 1;
+}
 @media (max-width: 768px) {
   .tab {
     width: auto;

@@ -248,3 +248,6 @@ input[type="select"]:focus {
 .margin-right {
   margin-right: 10px;
 }
+.text-bold {
+  font-weight: bold;
+}

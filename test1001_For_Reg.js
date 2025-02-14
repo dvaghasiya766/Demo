@@ -1,15 +1,15 @@
 let currentTabId = "subForm3";
 let tabProperty = {
   fullFilledsubForm1: true,
-  fullFilledsubForm2: false,
-  fullFilledsubForm3: false,
+  fullFilledsubForm2: true,
+  fullFilledsubForm3: true,
 };
 function lastIndex(obj) {
   return obj.length - 1;
 }
 function tabChange(tabId) {
   // Extract the last character of tabId (e.g., '1' from 'subForm1')
-  let idn = tabId.slice(-1);
+  let idn = lastIndex(tabId);
 
   // Get all tab elements
   let allTabs = [
@@ -33,13 +33,20 @@ function tabChange(tabId) {
   // Deselect all tab tiles
   for (let eachTabTile of allTabTiles) {
     eachTabTile.classList.add("tab");
-    if (eachTabTile.classList.contains("selectedTab")) {
-      eachTabTile.classList.remove("selectedTab");
-    }
+    eachTabTile.classList.remove("selectedTab");
   }
 
   // Show the tab with the corresponding id
-  document.getElementById(tabId).classList.remove("d-none");
-  document.getElementById(`tab${idn}`).classList.remove("tab");
-  document.getElementById(`tab${idn}`).classList.add("selectedTab");
+  console.log(tabId[idn]);
+
+  if (tabProperty[`fullFilledsubForm${tabId[idn]}`]) {
+    document.getElementById(`subForm${tabId[idn]}`).classList.remove("d-none");
+    document.getElementById(`tab${tabId[idn]}`).classList.remove("tab");
+    document.getElementById(`tab${tabId[idn]}`).classList.add("selectedTab");
+  } else {
+    document.getElementById(`subForm1`).classList.remove("d-none");
+    document.getElementById(`tab1`).classList.remove("tab");
+    document.getElementById(`tab1`).classList.add("selectedTab");
+    currentTabId = tabId;
+  }
 }

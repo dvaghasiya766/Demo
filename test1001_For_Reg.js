@@ -36,9 +36,6 @@ function tabChange(tabId) {
     eachTabTile.classList.remove("selectedTab");
   }
 
-  // Show the tab with the corresponding id
-  console.log(tabId[idn]);
-
   if (tabProperty[`fullFilledsubForm${tabId[idn]}`]) {
     document.getElementById(`subForm${tabId[idn]}`).classList.remove("d-none");
     document.getElementById(`tab${tabId[idn]}`).classList.remove("tab");
@@ -50,3 +47,20 @@ function tabChange(tabId) {
     currentTabId = tabId;
   }
 }
+document.addEventListener("DOMContentLoaded", function () {
+  let reStudMob = document.getElementById("reStudMob");
+  let studmob = document.getElementById("studmob");
+
+  reStudMob.value = 1234567890; // Set initial value
+  function changeMob() {
+    let newMobile = localStorage.getItem("studmob");
+    if (reStudMob) {
+      reStudMob.value = newMobile || ""; // Set value or empty if null
+    }
+  }
+  studmob.addEventListener("change", function (event) {
+    let mobile = event.target.value;
+    localStorage.setItem("studmob", mobile);
+    changeMob();
+  });
+});

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: #cde;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            margin: 0 0 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar .help {
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            background: gray;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .attendance .circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dashboard .monthly-report,
+        .dashboard .announcements {
+            width: 48%;
+        }
+
+        .pending-tasks ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pending-tasks ul li {
+            background: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>NXT WAVE™</h2>
+        <ul>
+            <li class="active">🏠 Home</li>
+            <li><a href="My Courses.html">📈 My Courses</a></li>
+            <li>📄 Assignments</li>
+            <li>📝 Quiz & Practice</li>
+            <li>💬 Discussion</li>
+            <li>📚 All Courses</li>
+            <li>🚩 Progress</li>
+            <li>👤 Profile</li>
+        </ul>
+        <div class="help">❓ Help</div>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <div class="profile">
+                <div class="avatar"></div>
+                <div class="info">
+                    <p><strong>Name:</strong> Aarav Dave</p>
+                    <p><strong>Student ID:</strong> 22SOEIT11035</p>
+                    <p><strong>Course:</strong> B.Tech in Information Technology</p>
+                    <p><strong>Semester:</strong> VI</p>
+                    <p><strong>Mentor ID:</strong> 2XXX10AD</p>
+                </div>
+            </div>
+            <div class="attendance">
+                <div class="circle">90%</div>
+                <p>Average Attendance</p>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="monthly-report">
+                <h3>Monthly Report</h3>
+                <div class="calendar"></div>
+            </div>
+            <div class="announcements">
+                <h3>Announcement <a href="#">View →</a></h3>
+                <ul>
+                    <li>📁 Make your Portfolio using HTML, CSS and JS</li>
+                    <li>📁 Make your Portfolio using HTML, CSS and JS</li>
+                    <li>📁 Make your Portfolio using HTML, CSS and JS</li>
+                    <li>📁 Make your Portfolio using HTML, CSS and JS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pending-tasks">
+            <h3>Pending Tasks,</h3>
+            <ul>
+                <li>📄 Make your Portfolio using HTML, CSS and JS - Last Date: 3rd March, 2025. CE101: 10PTS</li>
+                <li>📄 Make your Portfolio using HTML, CSS and JS - Last Date: 3rd March, 2025. CE101: 10PTS</li>
+                <li>📄 Make your Portfolio using HTML, CSS and JS - Last Date: 3rd March, 2025. CE101: 10PTS</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 2px dashed #ccc;
+            padding-bottom: 10px;
+        }
+
+        .assignment {
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 5px solid #007bff;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        .btn-green {
+            background-color: #28a745;
+        }
+
+        .btn-yellow {
+            background-color: #ffc107;
+        }
+
+        .btn-red {
+            background-color: #dc3545;
+        }
+
+        .old-discussions {
+            margin-top: 20px;
+        }
+
+        .discussion {
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #17a2b8;
+        }
+
+        .arrow {
+            font-size: 20px;
+            color: gray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="#">⬅</a>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Assignment 1: Python Programming</h2>
+
+        <div class="assignment">
+            <p><strong>1.</strong> Write a code for Given a list of integers, write a program to identify contiguous
+                sub-list that has the largest sum and print the sub-list. Any non-empty slice of the list with step size
+                1 can be considered as contiguous sub-list.</p>
+        </div>
+
+        <div class="assignment">
+            <p><strong>2.</strong> Write a code for Given a list of integers, write a program to identify contiguous
+                sub-list that has the largest sum and print the sub-list. Any non-empty slice of the list with step size
+                1 can be considered as contiguous sub-list.</p>
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-green">Upload File</button>
+            <button class="btn btn-yellow">Make Discussion</button>
+            <button class="btn btn-red">Submit</button>
+        </div>
+
+        <div class="old-discussions">
+            <h3>Old Discussions</h3>
+            <div class="discussion">
+                <p>Write a code for Given a list of integers, write a program to identify contiguous sub-list that has
+                    the largest sum and print the sub-list. Any non-empty slice of the list with step size 1 can be
+                    considered as contiguous sub-list.</p>
+                <span class="arrow">➜</span>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

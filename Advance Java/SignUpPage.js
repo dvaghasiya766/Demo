@@ -336,7 +336,8 @@ let FieldsArray3 = [
     labelElement: "field27",
     suggestionTxt: "Ex. Sachin&490.",
     isnull: false,
-    regex: /^[0-9]{1,3}$/,
+    regex:
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/,
   },
   {
     inputFieldElement: "rpsw",
@@ -344,7 +345,8 @@ let FieldsArray3 = [
     labelElement: "field28",
     suggestionTxt: "Re-enter the password.",
     isnull: false,
-    regex: /^[0-9]{1,3}$/,
+    regex:
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$/,
   },
   {
     inputFieldElement: "mentorID",
@@ -355,6 +357,32 @@ let FieldsArray3 = [
     regex: /^[A-Za-z0-9]{1,6}$/,
   },
 ];
+let allFields = [...FieldsArray1, ...FieldsArray2, ...FieldsArray3];
+allFields.forEach((eachField) => {
+  let field = document.getElementById(eachField.inputFieldElement);
+  field.onblur = function () {
+    validateField(
+      document.getElementById(eachField.inputFieldElement),
+      document.getElementById(eachField.errorElement),
+      document.getElementById(eachField.labelElement),
+      eachField.suggestionTxt,
+      eachField.isnull,
+      eachField.regex,
+      false
+    );
+  };
+  field.onkeydown = function () {
+    validateField(
+      document.getElementById(eachField.inputFieldElement),
+      document.getElementById(eachField.errorElement),
+      document.getElementById(eachField.labelElement),
+      eachField.suggestionTxt,
+      eachField.isnull,
+      eachField.regex,
+      false
+    );
+  };
+});
 document.getElementById("next1001").addEventListener("click", function () {
   let valid = [];
   FieldsArray1.forEach((eachField) => {
@@ -422,29 +450,50 @@ document.getElementById("next1002").addEventListener("click", function () {
     return;
   }
 });
-let allFields = [...FieldsArray1, ...FieldsArray2, ...FieldsArray3];
-allFields.forEach((eachField) => {
-  let field = document.getElementById(eachField.inputFieldElement);
-  field.onblur = function () {
-    validateField(
-      document.getElementById(eachField.inputFieldElement),
-      document.getElementById(eachField.errorElement),
-      document.getElementById(eachField.labelElement),
-      eachField.suggestionTxt,
-      eachField.isnull,
-      eachField.regex,
-      false
+document.getElementById("next1003").addEventListener("click", function () {
+  let valid = [];
+  FieldsArray3.forEach((eachField) => {
+    valid.push(
+      validateField(
+        document.getElementById(eachField.inputFieldElement),
+        document.getElementById(eachField.errorElement),
+        document.getElementById(eachField.labelElement),
+        eachField.suggestionTxt,
+        eachField.isnull,
+        eachField.regex,
+        true
+      )
     );
-  };
-  field.onkeydown = function () {
-    validateField(
-      document.getElementById(eachField.inputFieldElement),
-      document.getElementById(eachField.errorElement),
-      document.getElementById(eachField.labelElement),
-      eachField.suggestionTxt,
-      eachField.isnull,
-      eachField.regex,
-      false
-    );
-  };
+  });
+  let psw = document.getElementById("psw");
+  let rpsw = document.getElementById("rpsw");
+  if (psw.value === rpsw.value) {
+    document.getElementById("rpswsug").textContent = "Operation Completed.";
+    removeClass(document.getElementById("rpswsug"), "text-danger");
+    addClass(document.getElementById("rpswsug"), "text-success");
+    removeClass(document.getElementById("rpsw"), "errorField");
+    let x = document.getElementById("field28").firstElementChild;
+    if (x) {
+      removeClass(x, "text-danger");
+    }
+  } else {
+    document.getElementById("rpswsug").textContent = "Password must be same.";
+    addClass(document.getElementById("rpswsug"), "text-danger");
+    addClass(document.getElementById("rpsw"), "errorField");
+    let x = document.getElementById("field28").firstElementChild;
+    if (x) {
+      addClass(x, "text-danger");
+    }
+    document.getElementById("rpsw").focus();
+    valid.push(false);
+  }
+  if (!valid.includes(false)) {
+    tabObjectIndicator["fullFilledsubForm3"] = true;
+    tabChanged("tab3");
+    tabImageChanged();
+  } else {
+    return;
+  }
 });
+
+

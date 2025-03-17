@@ -1,0 +1,137 @@
+.NavCustomBG {
+  background-color: rgb(255 255 255);
+  color: white;
+}
+.NavOLPlogo {
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+.CustomNavLink {
+  color: #555;
+  text-decoration: none;
+  font-family: "Source Sans Medium", sans-serif;
+  margin: 0px 12px;
+  cursor: pointer;
+  font-size: large;
+}
+.carousel-progress {
+  position: absolute;
+  bottom: 10px;
+  /* Position at the bottom of the carousel */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  /* Width of the progress bar */
+  height: 4px;
+  /* Height of the progress bar */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Semi-transparent background */
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 10;
+  /* Ensure it's above the carousel */
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: #d6d6d692;
+  /* Blue color for the progress bar */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+  /* Smooth transition for progress */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  /* Size of the control buttons */
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  /* Border for visibility */
+  border-radius: 50%;
+  /* Circular buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+  z-index: 10;
+  /* Ensure buttons are above the carousel */
+}
+
+.carousel-control-prev {
+  left: 20px;
+  /* Position the previous button on the left */
+}
+
+.carousel-control-next {
+  right: 20px;
+  /* Position the next button on the right */
+}
+
+/* Hover Effects */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Darker background on hover */
+  border-color: #6a87a5;
+  /* Blue border on hover */
+  transform: translateY(-50%) scale(1.1);
+  /* Slightly enlarge on hover */
+}
+
+/* Icon Styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(0) invert(1);
+  /* Make icons white */
+  transition: filter 0.3s ease;
+  /* Smooth transition for icon color */
+}
+
+/* Icon Hover Effects */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0) invert(0.8);
+  /* Slightly darker icons on hover */
+}
+
+/* Optional: Add a glow effect on hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+  /* Glow effect */
+}
+
+/* Optional: Add a pulse animation for active clicks */
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateY(-50%) scale(1.2);
+  }
+
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.carousel-control-prev:active,
+.carousel-control-next:active {
+  animation: pulse 0.3s ease;
+  /* Pulse animation on click */
+}

@@ -53,3 +53,38 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => nextButton.classList.remove("active"), 300);
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  let courseDetails = [
+    {
+      img: "courseImg1",
+      title: "Introduction to Web",
+      desc: "Description:<br>This Courses is the most popular for students to learn about",
+    },
+    {
+      img: "courseImg2",
+      title: "Introduction to Web",
+      desc: "Description:<br>This Courses is the most popular for students to learn about",
+    },
+    {
+      img: "courseImg3",
+      title: "Introduction to Web",
+      desc: "Description:<br>This Courses is the most popular for students to learn about",
+    },
+    {
+      img: "courseImg4",
+      title: "Introduction to Web",
+      desc: "Description:<br>This Courses is the most popular for students to learn about",
+    },
+  ];
+  function ShowCourses() {
+    let courseCardContainer = document.getElementById("courseCardContainer");
+    let col = document.createElement("div");
+    col.classList.add("col-12", "col-md-6", "mb-2", "col-lg-3");
+    let card = document.createElement("div");
+    card.classList.add("card");
+    // <img src="Assets/Images/courseImg1.png" class="card-img-top" alt="...">
+    let img = document.createElement("img");
+    img.src = "Assets/Images/courseImg1.png";
+    
+  }
+});

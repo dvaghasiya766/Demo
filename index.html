@@ -16,7 +16,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="Assets/CSS/CustomCSS1001.css">
     <!-- External JS -->
-     <script src="Assets/JavaScript/CustomJSProgram1001.js"></script>
+    <script src="Assets/JavaScript/CustomJSProgram1001.js"></script>
 </head>
 
 <body>
@@ -26,7 +26,110 @@
     <link rel="stylesheet" href="Assets/CSS/Index.css">
     <!-- Styles -->
     <style>
+        .TransparentBG {
+            background: transparent;
+        }
 
+        .lighterBG {
+            background-color: #f9fbfe;
+        }
+
+        .darkBlueBG {
+            background-color: #00306E;
+        }
+
+        .lighrBlueBG {
+            background-color: #C4DAE6;
+        }
+
+        .HomeIMG {
+            max-width: 200px;
+        }
+
+        .Heading3 {
+            text-align: left;
+            width: 60%;
+            font-family: 'Source Sans MediumItalic', sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+            margin: 0px;
+        }
+
+        .TextBlock {
+            font-size: 18px;
+            line-height: auto;
+            box-sizing: border-box;
+            margin: 0px 0px 10px 0px;
+            font-family: "Source Sans Medium", sans-serif;
+        }
+
+        .DarkText {
+            color: #183b56;
+        }
+
+        .lightGrayText {
+            color: #555;
+        }
+
+        .lighterText {
+            color: #f9fbfe;
+        }
+
+        .semiLightGrayText {
+            color: #f9fbfeb0;
+        }
+
+        .TechSkillsIMG {
+            max-width: 400px;
+        }
+
+        .CourseCardButton {
+            background-color: #00306E;
+            color: #f9fbfe;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            padding: 5px 10px;
+            font-family: 'Source Sans Medium', sans-serif;
+            text-decoration: none;
+        }
+
+        .CourseCardButton:hover {
+            background-color: #00306E;
+            color: #f9fbfe;
+        }
+
+        @media screen and (max-width: 991px) {
+            .Heading3 {
+                font-size: 32px;
+                line-height: 48px;
+            }
+
+            .TextBlock {
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+
+        @media screen and (max-width: 479px) {
+
+            .Heading3 {
+                width: 100%;
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            .TextBlock {
+                font-size: 13px;
+                line-height: 15px;
+                margin-bottom: 15px;
+            }
+
+            .footer-txt-1001 {
+                font-size: 20px;
+                margin: 0px 0px 20px 0px;
+            }
+        }
     </style>
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light NavCustomBG">
@@ -119,6 +222,221 @@
                 <!-- <i class="bi bi-chevron-right carousel-control-next-icon"></i> -->
                 <span class="visually-hidden">Next</span>
             </button>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="lighterBG" id="home">
+        <div class="container py-md-5 py-3">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+                <img class="HomeIMG mb-3 m-md-1"
+                    src=" https://nxtwave.imgix.net/ccbp-website/intensive/landingpage/award1-mobile-3x.png" alt="">
+                <img class="HomeIMG mb-3 m-md-1"
+                    src="https://nxtwave.imgix.net/ccbp-website/intensive/landingpage/award2-desktop-2x.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Faculties Company -->
+    <div class="lighterBG" id="Community">
+        <div class="container py-md-5 py-3">
+            <h3 class="Heading3 DarkText">Mentor Community</h3>
+            <div class="TextBlock lightGrayText">
+                Our mentor community strongly believes in the power of sharing!
+                <br>
+                We collaborate with professionals from great companies to guide you on this exciting journey.
+                <br>
+            </div>
+            <img class="img-fluid"
+                src="https://nxtwave.imgix.net/ccbp-website/Home/Mentor+Community/mentor-community-companies.png"
+                alt="">
+        </div>
+    </div>
+    <!-- TeachSkills -->
+    <div class="darkBlueBG" id="Champions">
+        <div class="container TransparentBG py-md-5 py-3">
+            <div class="TransparentBG d-flex flex-column flex-lg-row justify-content-center">
+                <div class="TransparentBG d-flex flex-column mx-lg-5 mb-3">
+                    <h3 class="TransparentBG lighterText Heading3 mb-2">Best Tech Skilling EdTech Company of the year
+                        2022
+                    </h3>
+                    <div class="TransparentBG TextBlock semiLightGrayText">
+                        Our mentor community strongly believes in the power of sharing!
+                        <br>
+                        We collaborate with professionals from great companies to guide you on this exciting journey.
+                        <br>
+                    </div>
+                </div>
+                <img class="TechSkillsIMG TransparentBG"
+                    src="https://nxtwave.imgix.net/ccbp-website/Home/award-section/award-taking-image.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Courses -->
+    <div class="lighterBG" id="courses">
+        <div class="container py-5">
+            <h1 class="Heading3 DarkText mb-2">Availabel Courses</h1>
+            <!-- <div class="d-flex flex-column flex-md-row justify-content-center"></div> -->
+            <div class="row" id="courseCardContainer">
+                <div class="col-12 col-md-6 mb-2 col-lg-3">
+                    <div class="card">
+                        <img src="Assets/Images/courseImg1.png" class="card-img-top" alt="...">
+                        <div class="card-body TransparentBG">
+                            <h5 class="card-title-1001 text-truncate">Introduction to Web</h5>
+                            <p class="card-text-1001 text-truncate">
+                                Description: <br>
+                                This Courses is the most popular for students to learn about
+                            </p>
+                            <a href="course.html" class="btn btn-custom-1001">View Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-2 col-lg-3">
+                    <div class="card">
+                        <img src="Assets/Images/courseImg2.png" class="card-img-top" alt="...">
+                        <div class="card-body TransparentBG">
+                            <h5 class="TextBlock DarkText text-truncate">Introduction to Web</h5>
+                            <p class="card-text-1001 text-truncate">
+                                Description: <br>
+                                This Courses is the most popular for students to learn about
+                            </p>
+                            <a href="course.html" class="btn CourseCardButton">View Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-2 col-lg-3">
+                    <div class="card">
+                        <img src="Assets/Images/courseImg3.png" class="card-img-top" alt="...">
+                        <div class="card-body TransparentBG">
+                            <h5 class="card-title-1001 text-truncate">Introduction to Web</h5>
+                            <p class="card-text-1001 text-truncate">
+                                Description: <br>
+                                This Courses is the most popular for students to learn about
+                            </p>
+                            <a href="course.html" class="btn btn-custom-1001">View Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-2 col-lg-3">
+                    <div class="card">
+                        <img src="Assets/Images/courseImg4.png" class="card-img-top" alt="...">
+                        <div class="card-body TransparentBG">
+                            <h5 class="card-title-1001 text-truncate">Introduction to Web</h5>
+                            <p class="card-text-1001 text-truncate">
+                                Description: <br>
+                                This Courses is the most popular for students to learn about
+                            </p>
+                            <a href="course.html" class="btn btn-custom-1001">View Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Available Opprtunities -->
+    <div class="lighrBlueBG" id="Opprtunities">
+        <div class="container TransparentBG py-md-5 py-3">
+            <h1 class="TransparentBG text-center heading-1 Opprtunities mb-3 mb-md-5 pb-md-3">2000+ Companies have hired
+                NxtWave R learners
+            </h1>
+            <img class="img-fluid TransparentBG"
+                src="https://nxtwave.imgix.net/ccbp-website/intensive/companies-hiring-section/hiring-companies-desktop.png"
+                alt="">
+        </div>
+    </div>
+    <!-- Somthing Disscussion -->
+    <div class="lighterBG py-5" id="Disscussion">
+        <div class="container">
+            <h1 class="text-start heading-1 Disscussion">Let's Create Disscussion</h1>
+            <p class="TextBlock mb-3 mb-md-3 pb-md-1">
+                Discuss your interest, ask questions, and share your thoughts with our community of learners.
+            </p>
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label for="email" class="form-label" style="font-family: 'Source Sans Pro'; cursor: pointer;">
+                        Email address
+                    </label>
+                    <input type="email" class="form-control" style="font-family: 'Source Sans Pro';" id="email"
+                        placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="text" class="form-label" style="font-family: 'Source Sans Pro'; cursor: pointer;">
+                        Example textarea
+                    </label>
+                    <textarea class="form-control" id="text" rows="3"
+                        style="font-family: 'Source Sans Pro';"></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-custom-1001">Create Disscussion</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="bg-custom-1005" id="footer">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col">
+                    <img class="img-fluid img-responsive-1003 mb-4"
+                        src="https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/ccbp-website/Nxtwave_White_logo.svg"
+                        alt="">
+                </div>
+            </div>
+            <hr class="border-light mt-2">
+            <div class="row mb-3">
+                <div class="col-md-6 col-lg-3 col-12">
+                    <div class="d-flex flex-column">
+                        <p class="footer-txt-1001">Reach Us</p>
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <img src="Assets/Images/phone_light@3x.png" class="img-responsive-1004 me-2" alt="">
+                            <a class="footer-txt-1002">+91 8200859207</a>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <img src="Assets/Images/E-mail.png" class="img-responsive-1004 me-2" alt="">
+                            <a class="footer-txt-1002">support@nxtwave.tech</a>
+                        </div>
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <img src="Assets/Images/insta@3x.png" class="img-responsive-1004 me-2" alt="">
+                            <a class="footer-txt-1002">nxtwave.tech</a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-light mt-2 d-block d-md-none">
+                <div class="col-md-6 col-lg-3 col-12">
+                    <div class="d-flex flex-column">
+                        <!-- <p class="footer-txt-1001"></p> -->
+                        <a class="footer-txt-1003 m-0">About Us</a>
+                        <a class="footer-txt-1003 m-0" href="#Opprtunities">Opprtunities</a>
+                        <a class="footer-txt-1003 m-0" href="#Community">Community</a>
+                        <a class="footer-txt-1003 m-0" href="#Champions">4.0 Champions</a>
+                        <a class="footer-txt-1003 m-0">NxtWave'23 Review</a>
+                        <a class="footer-txt-1003 m-0">Python Tutorial</a>
+                    </div>
+                </div>
+                <hr class="border-light mt-2 d-block d-lg-none">
+                <div class="col-md-6 col-lg-3 col-12">
+                    <div class="d-flex flex-column">
+                        <!-- <p class="footer-txt-1001"></p> -->
+                        <a class="footer-txt-1003 m-0">Privacy Policy</a>
+                        <a class="footer-txt-1003 m-0">Cookie Policy</a>
+                        <a class="footer-txt-1003 m-0">Terms and Conditions</a>
+                        <a class="footer-txt-1003 m-0">Grievance Redressal</a>
+                        <a class="footer-txt-1003 m-0">Corporate Information</a>
+                        <a class="footer-txt-1003 m-0">Vision and Values</a>
+                    </div>
+                </div>
+                <hr class="border-light mt-2 d-block d-md-none">
+                <div class="col-md-6 col-lg-3 col-12">
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-row align-items-center mb-2">
+                            <img src="Assets/Images/Pin.png" class="img-responsive-1004" alt="">
+                            <p class="footer-txt-1005">Location</p>
+                        </div>
+                        <a class="footer-txt-1004 m-0">
+                            NxtWave, WeWork Rajapushpa Summit, Nanakramguda Rd, Financial
+                            District, Manikonda Jagir, Telangana 500032
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

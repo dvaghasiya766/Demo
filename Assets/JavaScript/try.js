@@ -39,6 +39,10 @@ const swiper = new Swiper(".slide-content", {
 const swiper1 = new Swiper(".mySwiper", {
   loop: true,
   grabCursor: "true",
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

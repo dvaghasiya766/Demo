@@ -19,7 +19,6 @@
   width: 100%;
   height: 100%;
 }
-
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -28,26 +27,18 @@
   justify-content: center;
   align-items: center;
 }
-
 .swiper-slide img {
   display: block;
   width: 100%;
   object-fit: cover;
 }
-
 .navBtnSwiper::before,
 .navBtnSwiper::after {
   color: #ffffff;
   font-size: xx-large;
 }
-
-.swiper-pagination-bullet {
-  background-color: lightblue;
-  opacity: 1;
-}
-
 .swiper-pagination-bullet-active {
-  background-color: #289dc4;
+  background-color: lightslategray;
 }
 
 @media screen and (max-width: 768px) {

@@ -82,9 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
     col.classList.add("col-12", "col-md-6", "mb-2", "col-lg-3");
     let card = document.createElement("div");
     card.classList.add("card");
-    // <img src="Assets/Images/courseImg1.png" class="card-img-top" alt="...">
     let img = document.createElement("img");
     img.src = "Assets/Images/courseImg1.png";
+    card.appendChild(img);
+    let cardBody = document.createElement("div");
+    cardBody.classList.add("card-body");
+    let cardTitle = document.createElement("h5");
+    cardTitle.classList.add("TextBlock", "DarkText", "text-truncate");
+    cardBody.appendChild(cardTitle);
+    let cardDesc = document.createElement("p");
     
   }
 });

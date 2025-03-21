@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="Assets/CSS/Index.css">
     <!-- Styles -->
     <style>
-        .TransparentBG {
-            background: transparent;
+        .BoldText {
+            font-weight: bold;
         }
 
         .lighterBG {
@@ -57,6 +57,14 @@
 
         .TextBlock {
             font-size: 18px;
+            line-height: auto;
+            box-sizing: border-box;
+            margin: 0px 0px 10px 0px;
+            font-family: "Source Sans Medium", sans-serif;
+        }
+
+        .DescTextBlock {
+            font-size: 15px;
             line-height: auto;
             box-sizing: border-box;
             margin: 0px 0px 10px 0px;
@@ -204,10 +212,15 @@
             <button class="carousel-control-prev" type="button" data-bs-target="#guestPanelCarousel"
                 data-bs-slide="prev">
                 <!-- <i class="bi bi-chevron-left carousel-control-prev-icon"></i> -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
                     <path
                         d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                </svg> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
                 </svg>
                 <span class="visually-hidden">Previous</span>
             </button>
@@ -252,20 +265,20 @@
     </div>
     <!-- TeachSkills -->
     <div class="darkBlueBG" id="Champions">
-        <div class="container TransparentBG py-md-5 py-3">
-            <div class="TransparentBG d-flex flex-column flex-lg-row justify-content-center">
-                <div class="TransparentBG d-flex flex-column mx-lg-5 mb-3">
-                    <h3 class="TransparentBG lighterText Heading3 mb-2">Best Tech Skilling EdTech Company of the year
+        <div class="container py-md-5 py-3">
+            <div class=" d-flex flex-column flex-lg-row justify-content-center">
+                <div class=" d-flex flex-column mx-lg-5 mb-3">
+                    <h3 class=" lighterText Heading3 mb-2">Best Tech Skilling EdTech Company of the year
                         2022
                     </h3>
-                    <div class="TransparentBG TextBlock semiLightGrayText">
+                    <div class=" TextBlock semiLightGrayText">
                         Our mentor community strongly believes in the power of sharing!
                         <br>
                         We collaborate with professionals from great companies to guide you on this exciting journey.
                         <br>
                     </div>
                 </div>
-                <img class="TechSkillsIMG TransparentBG"
+                <img class="TechSkillsIMG "
                     src="https://nxtwave.imgix.net/ccbp-website/Home/award-section/award-taking-image.png" alt="">
             </div>
         </div>
@@ -279,7 +292,7 @@
                 <div class="col-12 col-md-6 mb-2 col-lg-3">
                     <div class="card">
                         <img src="Assets/Images/courseImg1.png" class="card-img-top" alt="...">
-                        <div class="card-body TransparentBG">
+                        <div class="card-body ">
                             <h5 class="card-title-1001 text-truncate">Introduction to Web</h5>
                             <p class="card-text-1001 text-truncate">
                                 Description: <br>
@@ -292,9 +305,9 @@
                 <div class="col-12 col-md-6 mb-2 col-lg-3">
                     <div class="card">
                         <img src="Assets/Images/courseImg2.png" class="card-img-top" alt="...">
-                        <div class="card-body TransparentBG">
-                            <h5 class="TextBlock DarkText text-truncate">Introduction to Web</h5>
-                            <p class="card-text-1001 text-truncate">
+                        <div class="card-body ">
+                            <h5 class="TextBlock DarkText BoldText text-truncate">Introduction to Web</h5>
+                            <p class="DescTextBlock lightGrayText text-truncate">
                                 Description: <br>
                                 This Courses is the most popular for students to learn about
                             </p>
@@ -305,7 +318,7 @@
                 <div class="col-12 col-md-6 mb-2 col-lg-3">
                     <div class="card">
                         <img src="Assets/Images/courseImg3.png" class="card-img-top" alt="...">
-                        <div class="card-body TransparentBG">
+                        <div class="card-body ">
                             <h5 class="card-title-1001 text-truncate">Introduction to Web</h5>
                             <p class="card-text-1001 text-truncate">
                                 Description: <br>
@@ -318,7 +331,7 @@
                 <div class="col-12 col-md-6 mb-2 col-lg-3">
                     <div class="card">
                         <img src="Assets/Images/courseImg4.png" class="card-img-top" alt="...">
-                        <div class="card-body TransparentBG">
+                        <div class="card-body ">
                             <h5 class="card-title-1001 text-truncate">Introduction to Web</h5>
                             <p class="card-text-1001 text-truncate">
                                 Description: <br>
@@ -333,11 +346,11 @@
     </div>
     <!-- Available Opprtunities -->
     <div class="lighrBlueBG" id="Opprtunities">
-        <div class="container TransparentBG py-md-5 py-3">
-            <h1 class="TransparentBG text-center heading-1 Opprtunities mb-3 mb-md-5 pb-md-3">2000+ Companies have hired
+        <div class="container  py-md-5 py-3">
+            <h1 class=" text-center heading-1 Opprtunities mb-3 mb-md-5 pb-md-3">2000+ Companies have hired
                 NxtWave R learners
             </h1>
-            <img class="img-fluid TransparentBG"
+            <img class="img-fluid "
                 src="https://nxtwave.imgix.net/ccbp-website/intensive/companies-hiring-section/hiring-companies-desktop.png"
                 alt="">
         </div>

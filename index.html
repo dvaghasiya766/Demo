@@ -68,6 +68,48 @@
             </div>
         </div>
     </nav>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="Assets/Images/lpSlider1.png" data-src-mobile="Assets/Images/mbSlide1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="Assets/Images/lpSlider2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="Assets/Images/lpSlider3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="Assets/Images/lpSlider4.png" alt="">
+            </div>
+        </div>
+        <div class="swiper-button-next navBtnSwiper"></div>
+        <div class="swiper-button-prev navBtnSwiper"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            grabCursor: "true",
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>

@@ -1,24 +1,53 @@
 const swiper = new Swiper(".slide-content", {
-  // Optional parameters
   slidesPerView: 3,
-  slidesPerGroup: 3,
-  spaceBetween: 30,
-  // direction: 'vertical',
+  spaceBetween: 25,
+  // slidesPerGroup: 3,
   loop: true,
-
-  // If we need pagination
+  // loopFillGroupWithBlank: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    dynamicBullets: true,
   },
-
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    // type: "progress",
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
 
-  // And if we need scrollbar
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1000: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
+});
+const swiper1 = new Swiper(".mySwiper", {
+  loop: true,
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   scrollbar: {
     el: ".swiper-scrollbar",
   },

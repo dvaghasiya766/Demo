@@ -43,6 +43,9 @@
 .lightBG {
   background-color: #fafbfe;
 }
+.HomeIMG {
+  max-width: 200px;
+}
 .large-display-row {
   display: flex;
   flex-direction: row;
@@ -72,7 +75,7 @@
 .filed-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 label {
   color: #333333;
@@ -140,6 +143,21 @@ label {
   max-width: 700px;
   width: 100%;
 }
+.darkBlueBG {
+  background-color: #00306e;
+  color: #fafbfe;
+}
+.lightText {
+  color: #fafbfe !important;
+}
+.TechSkillsIMG {
+  width: 100%;
+  max-width: 400px;
+}
+.lighterBlueBG {
+  background-color: #c4dae6;
+}
+
 @media screen and (max-width: 768px) {
   .navBtnSwiper::before,
   .navBtnSwiper::after {

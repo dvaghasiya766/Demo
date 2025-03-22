@@ -40,11 +40,131 @@
 .swiper-pagination-bullet-active {
   background-color: lightslategray;
 }
-
+.lightBG {
+  background-color: #fafbfe;
+}
+.large-display-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+.img-container,
+.field-container {
+  width: 49%;
+}
+.heading-1 {
+  font-size: xx-large;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+}
+.darkText {
+  color: #00306e;
+}
+.description {
+  color: #555555;
+  font-size: medium;
+  margin: 0px 0px 10px 0px;
+  padding: 0;
+}
+.filed-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+label {
+  color: #333333;
+  font-size: large;
+  margin: 0px !important;
+  cursor: pointer;
+}
+.submit-btn {
+  background-color: #00306e;
+  color: #ffffff;
+  font-size: large;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: #002357;
+  color: #ffffffdc;
+}
+.form-check-input {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.form-check-input:focus {
+  border-bottom-color: rgb(220, 225, 230);
+  border-left-color: rgb(220, 225, 230);
+  border-right-color: rgb(220, 225, 230);
+  border-top-color: rgb(220, 225, 230);
+  box-shadow: #00306e 0px 0px 5px 0.081611px !important;
+}
+.form-check-input:checked {
+  background-color: #00306e !important;
+  border-color: #00306e;
+}
+.display-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
+}
+.display-row a img {
+  height: 30px;
+}
+.display-row a img:hover {
+  transform: scale(1.1);
+}
+.autoShow {
+  animation: autoShow both;
+  animation-timeline: view(90% auto);
+}
+@keyframes autoShow {
+  from {
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.orIMG {
+  max-width: 700px;
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
   .navBtnSwiper::before,
   .navBtnSwiper::after {
     color: #ffffff;
     font-size: larger;
+  }
+  .description {
+    font-size: smaller;
+  }
+
+  .large-display-row {
+    flex-direction: column;
+    gap: 0%;
+  }
+
+  .img-container,
+  .field-container {
+    padding: 0px 10px;
+    width: 100%;
+  }
+  .autoShow {
+    animation: autoShow both;
+    animation-timeline: view(75% auto);
+  }
+  .sm-row-reverse {
+    flex-direction: column-reverse;
   }
 }

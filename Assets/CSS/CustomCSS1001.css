@@ -19,6 +19,7 @@
   box-sizing: border-box;
   font-family: "Source Sans MediumItalic";
   transition: all 0.4s ease;
+  text-decoration: none;
 }
 body {
   background-color: #fafbfe;

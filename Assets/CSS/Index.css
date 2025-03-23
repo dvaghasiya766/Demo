@@ -157,6 +157,49 @@ label {
 .lighterBlueBG {
   background-color: #c4dae6;
 }
+#AboutUs div {
+  width: 100%;
+}
+
+#AboutUs div .description {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+#AboutUs div div {
+  max-width: 400px;
+  width: 100%;
+}
+
+#AboutUs div div a img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+}
+.footer-heading {
+  color: #999;
+  font-size: x-large;
+  font-family: "Source Sans Medium";
+  font-weight: normal;
+}
+.footer-icon {
+  height: 25px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.list-unstyled li a {
+  transform: scale(1);
+  font-size: medium;
+}
+.list-unstyled li a:hover {
+  font-size: large;
+  transform: scale(1.3);
+}
 
 @media screen and (max-width: 768px) {
   .navBtnSwiper::before,

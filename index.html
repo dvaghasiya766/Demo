@@ -157,7 +157,7 @@
                 <div class="field-container py-2 py-md-4">
                     <h1 class="heading-1 darkText autoShow">Sign In</h1>
                     <p class="description autoShow">Fields for email and password</p>
-                    <form action="" method="post">
+                    <form action="Student Panel/Navbar.html" method="post">
                         <div class="filed-group autoShow">
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
@@ -179,8 +179,8 @@
                         </div>
                     </form>
                     <div class="display-row autoShow">
-                        <a href="linkedIn.com" class="forgot-password">
-                            <img src="Assets/Images/linkedIn.png" alt="">
+                        <a href="LinkedIn.com" class="forgot-password">
+                            <img src="Assets/Images/LinkedIn.png" alt="">
                         </a>
                         <a href="Google.com" class="forgot-password">
                             <img src="Assets/Images/Google.png" alt="">
@@ -194,7 +194,7 @@
         </div>
     </div>
     <!-- or -->
-    <div class="lighterBlueBG py-4 my-3 d-none d-md-block">
+    <div class="d-none w-100 e d-md-block">
         <div class="container d-flex justify-content-center">
             <img src="Assets/Images/Frame 1000004971.png" alt="" class="orIMG autoShow">
         </div>
@@ -252,8 +252,8 @@
                         </div> -->
                     </form>
                     <div class="display-row autoShow">
-                        <a href="linkedIn.com" class="forgot-password">
-                            <img src="Assets/Images/linkedIn.png" alt="">
+                        <a href="LinkedIn.com" class="forgot-password">
+                            <img src="Assets/Images/LinkedIn.png" alt="">
                         </a>
                         <a href="Google.com" class="forgot-password">
                             <img src="Assets/Images/Google.png" alt="">
@@ -280,16 +280,16 @@
             <div class="d-flex flex-warp justify-content-around autoShow mx-4">
                 <!-- Social Icons -->
                 <a href="#" class="social-icon">
-                    <img src="Assets/Images/facebook.png" alt="">
+                    <img src="Assets/Images/FaceBook.png" alt="">
                 </a>
                 <a href="#" class="social-icon">
-                    <img src="Assets/Images/x.png" alt="">
+                    <img src="Assets/Images/X.png" alt="">
                 </a>
                 <a href="#" class="social-icon">
-                    <img src="Assets/Images/instagram.png" alt="">
+                    <img src="Assets/Images/Instagram.png" alt="">
                 </a>
                 <a href="#" class="social-icon">
-                    <img src="Assets/Images/linkedin.png" alt="">
+                    <img src="Assets/Images/LinkedIn.png" alt="">
                 </a>
                 <a href="#" class="social-icon">
                     <img src="Assets/Images/YouTube.png" alt="">
@@ -401,3 +401,41 @@
 </body>
 
 </html>
+
+<!-- 
+<%
+		Cookie[] cookies = request.getCookies();
+		if (cookies != null) {
+    		for (Cookie cookie : cookies) {
+        		if ("isFailed".equals(cookie.getName())) {
+		            // Remove the cookie first
+		            Cookie removeCookie = new Cookie("isFailed", "");
+		            removeCookie.setMaxAge(0);
+		            response.addCookie(removeCookie);
+		            %>
+		            <script>
+		                displayPopUp(
+		                    document.getElementById('popUpDanger'),
+		                    document.getElementById('popUpDangerText'),
+		                    '<%= cookie.getValue() %>'
+		                );
+		            </script>
+		            <%
+		            break;
+		        }
+    		}
+		}
+	%>
+    <script type="text/javascript">
+    	function displayPopUp(popUpId, popUpTextId, popUpText) {
+    		popUpId.classList.remove("d-none");
+    		popUpId.classList.add("d-flex", "popUpAnimation");
+    		popUpTextId.innerHtml = popUpText;
+    		setTimeout(() => {
+    			popUpId.classList.remove("d-flex");
+  	    		popUpId.classList.add("d-none");
+  	  		}, 5000);
+    	}
+		// displayPopUp(document.getElementById("popUpDanger"), document.getElementById("popUpDangerText"), "Invalid ID & Password");
+    </script>
+ -->
